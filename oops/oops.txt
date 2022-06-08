@@ -1,3 +1,19 @@
+C++ was developed ny bjarne stroustup
+c++ is a superset of c .
+In c++ we can perform procedural , object oriented and generic programming all .
+C follows top-down approach but c++ follows bottom-up approach.
+Top Down Approach: In this we will decide the flow of functions first and then we will define the functions
+Bottom Up Approach: In this we will define the functions and then decide the flow in main function.
+
+
+Note:
+        int *p;
+        p=&x;  p points towards address of x
+
+        int &y = x; y has reference of x
+        reference variable is an internal pointer 
+        It has to be initialised with declaration.
+
 Object Oriented Programming
 oops is a type of programming technique in which everything revolves around object
 
@@ -11,6 +27,7 @@ and it has some behaviour like it's health , it can dance and all.
 
 Class:
 It is a user-defined datatype.
+It is basically a blueprint of object.
 Basically if we have one int a; so we created an object a of class type integer Or
 wh have Hero Ramesh so we have an object ramesh of class type hero . our object will inherit the properties 
 of class from which it is inherited.
@@ -93,4 +110,21 @@ STATIC:
     static data members.
 
 
-    const/const functions / intialisation list 
+    const/const functions / intialisation list
+
+ENCAPSULATION:
+        Wrapping up data members and functions.
+        Fully encapusulated class is a class which has it's all data members as private.
+        Encapsulation provide us feature such as data hiding. we can make our whole file "Read Only".
+
+        It's really helpful for unit testing.
+
+        We can group data members in c language too using structure but we cannot group their function 
+        together.
+
+INHERITANCE:
+        Assume we have a class human and a class male. Now ideally male class should have all the peoperties
+        of human class so here, human class is called superclass or parent class and male is called subclass
+        or child class.
+
+        We can inherit the properties through 3 access Modifiers public ,private and protected.
