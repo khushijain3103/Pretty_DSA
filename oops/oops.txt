@@ -84,3 +84,13 @@ DESTRUCTOR:
 
 
 STATIC:
+    Static Data Members: These data members can be accessed without creating the object and are constant
+    throughout the code.
+    These are initialised outside the class using scope resolution operator.
+    syntax: datatype name_of_class :: name_of_member = value;
+
+    Static functions : These functions can also be accessed without the creation of object and return only 
+    static data members.
+
+
+    const/const functions / intialisation list 
