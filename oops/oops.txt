@@ -1,0 +1,86 @@
+Object Oriented Programming
+oops is a type of programming technique in which everything revolves around object
+
+Object is an entity which has state/properties and behaviour like laptop camera etc.
+
+oops is needed to create a more real world programming technique which increases the redability and managibilty
+of our program.
+
+For eg. in games we have a player which is an objects and it has some states like height features and all
+and it has some behaviour like it's health , it can dance and all.
+
+Class:
+It is a user-defined datatype.
+Basically if we have one int a; so we created an object a of class type integer Or
+wh have Hero Ramesh so we have an object ramesh of class type hero . our object will inherit the properties 
+of class from which it is inherited.
+
+From this we can say that object is an instance of class.
+
+An object of empty class wil have a memory of one byte for it's identification.
+
+We can access public data members of an class using dot operator .
+
+Access Modifiers:
+
+1. public
+2. private
+3. protected
+
+By default access modifier is private.
+
+If we wanna access the private members of our class we can do the same through getter and setter functions 
+refer getter/setter.cpp for code .
+
+Dynamic Allocation of object:
+    Synatx: Hero *spiderMan = new Hero;
+    *spiderMan is the address of object stored in heap.
+    refer DynamicAllocation.cpp for code
+
+We have two data members in the class one is integer and the other is char so ideally sizeOf our object 
+should be 5 byte but when we run it it was 8 byte for this we need to learn padding and data alignment 
+later.
+
+CONSTRUCTOR:
+    whenever we make an object behind the scene a constructor is called 
+    constructor is a function which has no return type and has same name as class.
+
+Default Constructor: A default paramter is a function which has no input parameter . It is called whether the
+constructor is made or not it will be called eitherway. 
+
+Parameterized Constructor: It is a function which has parameters passed in it .
+
+Copy Constructor: It is a fucntion in which address of the object is passed and it gets same value as data
+members of the passed object. If we don't make this function in our class it will also be made own by own like
+default constructor.
+
+when we call default copy constructor it will perform shallow copy .
+
+shallow copy:
+        In this type of copy the address of one object is storeed in the address of other object so if we change
+        the value in one object thw value of other object will also be chnaged so to solve this error we 
+        make our own copy constructor in which we perform deep copy 
+
+deep copy:
+        In deep copy we perform original duplicacy which means we will copy the value of one object into other
+        with different address og the other object in heap so if we chnage the value of object one it will not
+        be reflected in the other object.
+
+
+COPY ASSIGNMENT OPERATOR(=):
+    Hero a (10,'B');
+    Hero b (20,'C');
+
+    a=b;
+
+All the values of b will be copied into b so now values of a is equal to b.
+
+DESTRUCTOR:
+        It dealocate the memory of the object . for static object we destructor is called by default but for
+        dynamic object we have to call destructor using "delete" keyword.
+
+        destructor has same name as class no input parameter and no return type but it has a "~" sign in front
+        of it's name to differentiate it from the default constructor.
+
+
+STATIC:
