@@ -14,10 +14,75 @@ Note:
         reference variable is an internal pointer 
         It has to be initialised with declaration.
 
+
+Functions:
+        Functions help us to make our code easy to read easy to debugg but most of all it makes us to save
+        our memory .The functions which we will call in our main will be there in our memory stack and 
+        as soon as they are called they will be removed so that we can write big codes in our 64 kbyte
+        fixed RAM.
+
+        Small functions do not take much space but take time for calling and all so we prefer not to make 
+        small functions as it will increase our time but we want to take it's other features such as easy to
+        read and all so for that we can make inline functions.
+
+        Inline Function : Inline function are made using keyword "Inline" . Inline is a request not a command
+        which means it's compilers choice to make it inline or not if it will find it suitable then inline is made
+        or not.
+        In Inline while compiling compiler writes the code of the function instead of calling it so it executes
+        the code direct . Using this we get our easy to read organised code and saves our time of call stack. 
+
+        Syntax:
+            inline void show(){
+                cout<<"I am inline function";
+            }
+
+    Note: Polymorphism: It is the ability of the object to take many forms . It can be executed using
+            1) Function OVERLOADING
+            2) Operator OVERLOADING
+            3) Virtual Functions
+
+FUNCTION OVERLOADING: If we have more than on functions having same name then this process is called 
+                    fucntion overloading.
+                When one function is overloaded with different jobs .
+
+                If we have two functions with same name and diff arguments then the argument which we will
+                pass matches the function then that function will be called.
+
+STRUCTURE: It is a collection of dissimilar events.
+            It is used to group variables and create data type.
+
+Syntax:   struct book{
+            int bookid;
+            char title[20];
+            float price;
+        };
+
+        int main(){
+            struct book b1={100,"title is" , 450.0};
+
+            book b2;
+            b2.bookid = 101;
+            strcpy(b2.title,"title");
+            b2.price = 450.0;
+
+            book b3;
+            b3=b3;
+        }
+
+        in c we have to write struct keyword but in c++ struct is optional
+        In c structure we cannot have function but in c++ we can have functions.
+        Members of structure are by default public.
+
+    
+
 Object Oriented Programming
 oops is a type of programming technique in which everything revolves around object
 
 Object is an entity which has state/properties and behaviour like laptop camera etc.
+
+Object has data members and member functions.
+Member functions can be defined inside a class or outside but if we define it inside a class functions are
+by default inline but outside the class they are inline if we use keyword "inline".
 
 oops is needed to create a more real world programming technique which increases the redability and managibilty
 of our program.
