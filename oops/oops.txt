@@ -49,13 +49,7 @@ FUNCTION OVERLOADING: If we have more than on functions having same name then th
                 pass matches the function then that function will be called.
 
 
-OPERATOR OVERLOADING: Assume we have an add function so we can name it as add() but if we want to name it 
-                    as "+" we can't . Though we can do that if we want but we have to write opeartor 
-                    keyword in front as:
 
-                    syntax: int opeartor +(int a , int b){
-                        return a+b;
-                    }
 
 STRUCTURE: It is a collection of dissimilar events.
             It is used to group variables and create data type.
@@ -194,6 +188,24 @@ STATIC:
 
 
     const/const functions / intialisation list
+
+OPERATOR OVERLOADING: Assume we have an add function so we can name it as add() but if we want to name it 
+                as "+" we can't . Though we can do that if we want but we have to write opeartor 
+                keyword in front as:
+
+                syntax: int opeartor +(int a , int b){
+                    return a+b;
+                }
+
+                must check operatorOverloading.cpp 
+
+Friend Function: It is not a member function of a class to which it is a friend.
+                It is declared inside the class but defined outside the class.
+                It is declared with a friend keyword.
+                It can access any data members of a class but not directly.
+                It will have no caller object.
+                Friend Function can be a friend to more than one classes. (see friendfunction2.cpp)
+                Friend function can be declared in public or private doesn't matter coz it's not a member function
 
 
 ENCAPSULATION:
