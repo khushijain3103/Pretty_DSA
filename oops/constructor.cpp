@@ -58,6 +58,7 @@ int main()
     cout<<batMan.level<<endl;
     cout<<batMan.getHealth();
 
+    cout<<sizeof(ironMan);
 
     return 0;
 

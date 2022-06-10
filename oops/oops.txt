@@ -48,6 +48,15 @@ FUNCTION OVERLOADING: If we have more than on functions having same name then th
                 If we have two functions with same name and diff arguments then the argument which we will
                 pass matches the function then that function will be called.
 
+
+OPERATOR OVERLOADING: Assume we have an add function so we can name it as add() but if we want to name it 
+                    as "+" we can't . Though we can do that if we want but we have to write opeartor 
+                    keyword in front as:
+
+                    syntax: int opeartor +(int a , int b){
+                        return a+b;
+                    }
+
 STRUCTURE: It is a collection of dissimilar events.
             It is used to group variables and create data type.
 
@@ -89,6 +98,11 @@ of our program.
 
 For eg. in games we have a player which is an objects and it has some states like height features and all
 and it has some behaviour like it's health , it can dance and all.
+
+State Of an Object:
+            The collection of values of the member variable of an object is called state.
+            Ideally,state should not be changed by directly accessing the data members they should be changed
+            by accessing functions.
 
 Class:
 It is a user-defined datatype.
@@ -166,6 +180,10 @@ DESTRUCTOR:
 
 
 STATIC:
+    Static Local Variable: static int x;
+    It has 0 value if it is not initialised. It will be same throughout the code and will not destroy if the 
+    function is removed from call stack;
+
     Static Data Members: These data members can be accessed without creating the object and are constant
     throughout the code.
     These are initialised outside the class using scope resolution operator.
@@ -176,6 +194,7 @@ STATIC:
 
 
     const/const functions / intialisation list
+
 
 ENCAPSULATION:
         Wrapping up data members and functions.
