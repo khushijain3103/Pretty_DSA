@@ -113,9 +113,9 @@ We can access public data members of an class using dot operator .
 
 Access Modifiers:
 
-1. public
-2. private
-3. protected
+1. public : They will be accessed by both
+2. private : They will neither be accessed objects nor dervied class.
+3. protected : They will be accessed by derived class but not objects
 
 By default access modifier is private.
 
@@ -224,3 +224,68 @@ INHERITANCE:
         or child class.
 
         We can inherit the properties through 3 access Modifiers public ,private and protected.
+
+        TYPES:
+            Single:
+                class A{
+
+                };
+                class B:Public A{
+
+                };
+
+            Multiple:
+                class A{
+
+                };
+                class B{
+
+                };
+
+                class C : Public A , Public B{
+
+                };
+
+            Multilevel:
+                class A{
+
+                };
+                class B: public A{
+
+                };
+                class C: public B{
+
+                };
+
+            heirarchical:
+                class A{
+
+                };
+                class B: public A{
+
+                };
+                class C: public A{
+
+                };
+
+            heriditary:
+
+
+Access modifier plays a great role in inheritance like while inherting they are wriiten in front of parent
+class. 
+they denote the accesibility of the members of parent class to the objects of child class .
+
+private members of parent class cannot be accessed by the objects of child class .
+
+protected and public members can be accessed in case of public , protected member become protected and 
+public becomes public and in case of protected they both become protected in child class so cannot be 
+directly accessed by the objects.
+
+
+Is-a realtionship:
+    Banana is a fruit there is an association between these two classes Banana and fruit.
+    now association is of three types:
+     Aggregation
+     composition
+     inheritance
+
