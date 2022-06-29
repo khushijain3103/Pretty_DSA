@@ -289,3 +289,144 @@ Is-a realtionship:
      composition
      inheritance
 
+
+Constructor and destructor in inheritance:
+    In inheritance child constructor is called first but then it will call the parent constructor which will be
+    executed first and then it will execute child constructor .
+
+    so, child constructor is called first but executed last unlike in destructor in which child destructor is
+    executed first and then the parent .
+
+    If we will not make constructor and destructorin inheritance it will be made by complier own by own
+    but the syntax for the same is:
+
+
+    class Parent{
+        int a;
+        public:
+         Parent(int x){
+            a=x;
+         }
+    }; 
+
+    class Child{
+        int b;
+        public:
+        Child(int x ,int y):Parent(x){
+            b=y;
+        }
+    }
+
+    int main(){
+        Child khushi(10,20);
+        return 0;
+    }
+
+Object Pointer:
+            pointer which stores the address of the object of a particular class is called
+            object pointer.
+
+This Pointer:
+            this is a local object pointer in every instance member function containing address 
+            of the caller object. 
+
+New & Delete:
+          new is a keyword which make variable of certain datatype in heap which is known as dynamic
+          memory allocation.
+
+          DMA variables needs to be deleted as soon as they are used because there is no function stack 
+          in it so that it is automatically deleted so we use delete keyword.
+
+          syntax: delete p;
+                  delete [] p ;  
+
+
+Method overriding:
+    when parent and child class have same function name with same arguements it's called overriding
+
+Method Hiding:
+    when parent and child class have same function name but different arguements it's called hiding.
+
+Base Class Pointer:
+    A pointer of parent class can store the address of it's child classes but it's inverse is not true.
+
+Virtual Functions:
+    In Early Binding everything is decided at complie time which object will call ehich function and all so consider the code:
+
+        class A{
+
+            public:
+                void f1(){
+
+                }
+
+        };
+
+        class B : public A{
+
+            public:
+                void f1(){
+                    
+                }
+
+        };
+
+        int main()
+        {
+            A *p , obj;
+            B obj2;
+
+            p = &obj2; //base class pointer can store address of it's child;
+
+            obj.f1();  // in this case early binding will happen which means at compile time it will be decided that class b function will be called
+                        and this is called method overriding
+            p->f1(); //but in this case  memory will be given to p pointer at runtime so now compiler has only type of p pointer which is the parent 
+                        class so it will call the function of parent class.
+                      // Ideally this should not happen so we use the keyword virtual in front of our function so that it will perform late binding.
+        }
+
+
+Late Binding:
+        It's a concept in which we tell our compiler to compile this program at runtime after we can allot the memory to our pointer.
+        If we make a virtual function in parent class then all the child class function with same name are all virtual functions.
+
+whenever a virtual function is declared in a class compiler automatically make a vptr (a pointer) and A
+vtable(array) in it.
+
+vptr contains the address of the table/array.
+
+Array contains the address of the functions which will be called ac to late and early binding.
+
+Do see the working of virtual class in the images folder.
+
+Pure Virtual Function:
+    A do nothing function is called a pure virtual function.
+
+    Syntax:
+        virtual void fun () = 0 ; 
+
+    A class containing do nothing function cannot have it's object because it will lead to calling of do nothing 
+    function which is illegal  but this type of class can have it's child class which can again call this function
+    so it child class must have a diff function with same name so that conceptof overriding come into 
+    action.
+    And we make it virtual so that it cannot be called by the method of pointer.
+
+    
+
+Abstract class:
+    A class which contains a pure virtual function is called an abstract class.
+    Abstract class cannot have it's object but it can hace a child class which can have it's object.
+
+
+Templates:
+    Function Template:
+        when we have to do function overloading just due to difference in data type of two function ans all
+        the other number of arguements are same then instead of function overloading where we have to write
+        same code again and again we can use Template function 
+
+        Syntax:
+                template <class x> x function(x arg1 , x arg2 ,...)
+
+            In this x is the datatype which will be changed according to the arguments passed in the function calling.
+
+    
