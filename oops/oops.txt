@@ -147,8 +147,8 @@ default constructor.
 when we call default copy constructor it will perform shallow copy .
 
 shallow copy:
-        In this type of copy the address of one object is storeed in the address of other object so if we change
-        the value in one object thw value of other object will also be chnaged so to solve this error we 
+        In this type of copy the address of one object is stored in the address of other object so if we change
+        the value in one object the value of other object will also be chnaged so to solve this error we 
         make our own copy constructor in which we perform deep copy 
 
 deep copy:
