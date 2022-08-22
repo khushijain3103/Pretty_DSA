@@ -1,0 +1,46 @@
+Recursion:
+    when a function calls itself until a base condition is met.
+    It basically means breaking thing into smaller things.
+
+If a base conditionis not there then there will be a segmentation fault 
+commonly called stack overflow.
+
+It is  because the intital function will wait in the stack and call another
+function and it will continue for an infinite loop which will cause stack
+overflow.
+
+questions:
+    1.print names n times
+    2.print 1 to n
+    3.print n to 1
+    4.print 1 to n (backtracking)
+    5.print n to 1 (backtracking)
+    6.sum of first n numbers
+    7.factorial of first n numbers.
+    8.reverse an array : swap left and right.
+    9.check if a string is pallindrome or not.
+
+
+Multiple Recursion calls:
+    question:
+        1.print Fibonnacci series
+        2. print all subsequences
+        3.print all subsequences whose sum is k.
+        4.print one subsequence whose sum is k.
+        5.count the number of subsequence.
+        6.combination sum
+        7.subset sum
+        8.subset sum 2
+        9.print all permutations (visited array , swap)
+        10.N-queens
+        11.sudoku solver
+        12.M-coloring //graph question do it later
+        13.pallindrome partitioning
+        14.rat in a maze
+        15.kth-permutation
+
+
+
+     
+
+
